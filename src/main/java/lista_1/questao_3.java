@@ -6,7 +6,6 @@ package lista_1;
 =-----------------=
 */
 import javax.swing.JOptionPane;
-import java.math.MathContext;
 
 /*
 =---------------=
@@ -72,7 +71,7 @@ public class questao_3
             delta = ((b * b) - 4 * a * c); // Fórmula: b² - 4ac
 
             // < Verifica as regras do Δ >
-            if (delta > 0 || delta == 0) // Possui duas soluções reais ou uma solução real
+            if (delta >= 0) // Possui duas soluções reais ou uma solução real
             {
                 // < Aplica a fórmula de Bhaskara x=−b±√Δ/2a >
                 x1 = ((-b + (float)Math.sqrt(delta)) / (2 * a)); // A função sqrt utiliza o tipo double, mas como
@@ -83,7 +82,7 @@ public class questao_3
             }
             else // Não possui uma solução real
             {
-                JOptionPane.showMessageDialog(null, "Essa não possui uma solução real.", titulo, 1);
+                JOptionPane.showMessageDialog(null, "Essa equação não possui uma solução real.", titulo, 1);
             }
         }
     }
